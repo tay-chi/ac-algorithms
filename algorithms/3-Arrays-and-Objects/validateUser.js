@@ -21,12 +21,32 @@ function validateUserCredentials(users, inputUsername, inputPassword) {
     
 }
 
-// Example usage
-const registeredUsers = [
+// // Example usage
+// const registeredUsers = [
+//     { username: "user1", password: "password123" },
+//     { username: "user2", password: "secretword" },
+//     { username: "admin", password: "admin123" }
+// ];
+// const username = "user1";
+// const password = "password123";
+// console.log(validateUserCredentials(registeredUsers, username, password)); // Output: true
+
+
+function validateUserCredentials(users, inputUsername, inputPassword) {
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].username === inputUsername && users[i].password === inputPassword) {
+        return true; 
+      }
+    }
+    return false; 
+  }
+  
+  
+  const registeredUsers = [
     { username: "user1", password: "password123" },
     { username: "user2", password: "secretword" },
     { username: "admin", password: "admin123" }
-];
-const username = "user1";
-const password = "password123";
-console.log(validateUserCredentials(registeredUsers, username, password)); // Output: true
+  ];
+  const username = "user1";
+  const password = "password123";
+  console.log(validateUserCredentials(registeredUsers, username, password)); 
