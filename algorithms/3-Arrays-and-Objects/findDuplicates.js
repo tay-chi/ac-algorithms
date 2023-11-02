@@ -19,12 +19,30 @@ Steps:
 6. After iterating through the entire array, if no duplicates are found, return false.
  */
 
+// if (encounteredNumbers)
+
+console.log("test");
+
+
+let encounteredNumbers = {};
+
 function hasDuplicates(arr) {
-   
+    for (i = 0; i < arr.length; i++) {
+    let numIteration = numbers1[i]
+if (numbers1.hasOwnProperty(numIteration)) {
+    return true; else (
+        return false
+    )
+   // encounteredNumbers.num1 = numbers1[i]
+
+}
+    }
+
 }
 
 // Example usage
 const numbers1 = [1, 2, 3, 4, 5, 6];
 const numbers2 = [1, 2, 3, 4, 2, 6];
 console.log(hasDuplicates(numbers1)); // Output: false
-console.log(hasDuplicates(numbers2)); // Output: true
+// console.log(hasDuplicates(numbers2)); // Output: true
+console.log(encounteredNumbers);
